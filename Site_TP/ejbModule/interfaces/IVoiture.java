@@ -2,12 +2,12 @@ package interfaces;
 
 import java.util.List;
 
-import entities.Voiture_entity;
+import entities.CarEntity;
 
 public interface IVoiture {
-	public List<Voiture_entity> getVoitures();
+	public List<CarEntity> getVoitures();
 	
-	public void addVoiture(Voiture_entity voiture);
+	public void addVoiture(CarEntity voiture);
 	
 	public void deleteVoiture(int id);
 }

@@ -12,7 +12,9 @@
 			crossorigin="anonymous" />
 		<link rel="stylesheet" href="css/index.css" />
 		<title>PA - le dieu</title>
-		<% User_entity user = (User_entity)request.getSession(false).getAttribute("currentSessionUser");%>
+		<%
+			UserEntity user = (UserEntity)request.getSession(false).getAttribute("currentSessionUser");
+		%>
 	</head>
 
 	<header

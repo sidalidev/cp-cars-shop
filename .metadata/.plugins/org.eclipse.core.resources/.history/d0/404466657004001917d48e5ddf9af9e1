@@ -1,0 +1,79 @@
+package src.user;
+
+import java.io.IOException;
+
+import javax.ejb.EJB;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
+import entities.UserEntity;
+import interfaces.IUser;
+
+/**
+ * Servlet implementation class User_Servlet
+ */
+@WebServlet("/User_Servlet")
+public class UserServlet extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+       
+    @EJB
+    private IUser interUser;
+    
+    /**
+     * @see HttpServlet#HttpServlet()
+     */
+    public UserServlet() {
+        super();
+        // TODO Auto-generated constructor stub
+    }
+
+	/**
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
+		UserEntity user = interUser.getUser(request.getParameter("email"));
+		String action = String.valueOf(request.getParameter("method"));
+		
+		if(action.equals("logout")) {
+		
+			HttpSession session = request.getSession(false);
+			session.invalidate();
+			request.getRequestDispatcher("index.jsp").forward(request, response);
+		
+		} else {
+	
+			if(user.getPassword().equals(request.getParameter("password"))) {
+				HttpSession session = request.getSession(true);
+				session.setAttribute("currentSessionUser", user);
+				request.getRequestDispatcher("index.jsp").forward(request, response);
+			}
+		}
+	}
+
+	/**
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        
+		String username = String.valueOf(request.getParameter("username"));
+		String email = String.valueOf(request.getParameter("email"));
+		String password = String.valueOf(request.getParameter("password"));
+		
+		UserEntity user = new UserEntity();
+		user.setUsername(username);
+		user.setEmail(email);
+		user.setPassword(password);
+		
+		interUser.addUser(user);
+		
+		HttpSession session = request.getSession(true);
+		session.setAttribute("currentSessionUser", user);
+		request.getRequestDispatcher("index.jsp").forward(request, response);		
+	}
+
+}

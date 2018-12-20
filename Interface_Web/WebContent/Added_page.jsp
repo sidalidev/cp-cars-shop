@@ -14,10 +14,16 @@ pageEncoding="UTF-8"%>
     />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
     <link rel="stylesheet" href="css/index.css" />
-    <% Voiture_entity v = (Voiture_entity)request.getAttribute("v"); %>
-    <% Moto_entity m = (Moto_entity)request.getAttribute("m"); %>
+    <%
+    	CarEntity v = (CarEntity)request.getAttribute("v");
+    %>
+    <%
+    	MotoEntity m = (MotoEntity)request.getAttribute("m");
+    %>
     <%-- <title> <%= m.getModele() %> </title> --%>
-    <% User_entity user = (User_entity)request.getSession(false).getAttribute("currentSessionUser");%>
+    <%
+    	UserEntity user = (UserEntity)request.getSession(false).getAttribute("currentSessionUser");
+    %>
   </head>
 	<header
 		class="navbar navbar-expand flex-column flex-md-row bd-navbar header">

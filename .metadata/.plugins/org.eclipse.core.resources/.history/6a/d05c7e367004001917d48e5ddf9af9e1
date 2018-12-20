@@ -1,0 +1,11 @@
+package interfaces;
+
+import java.util.List;
+
+import entities.OthersEntity;
+
+public interface IAutre {
+	public List<OthersEntity> listerAutresVehicules();
+	
+	public void addAutreVehicule(OthersEntity autre);
+}

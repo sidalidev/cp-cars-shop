@@ -1,10 +1,10 @@
 package interfaces;
 
-import entities.User_entity;
+import entities.UserEntity;
 
 public interface IUser {
 
-	public void addUser(User_entity user);
-	public User_entity getUser(String email);
+	public void addUser(UserEntity user);
+	public UserEntity getUser(String email);
 	
 }

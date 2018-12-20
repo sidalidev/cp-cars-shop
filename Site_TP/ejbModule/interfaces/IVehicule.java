@@ -1,9 +1,9 @@
 package interfaces;
 
-import entities.Vehicule_entity;
+import entities.VehiculeEntity;
 
 public interface IVehicule {
 
-	public Vehicule_entity getVehicule(int id);
+	public VehiculeEntity getVehicule(int id);
 	
 }

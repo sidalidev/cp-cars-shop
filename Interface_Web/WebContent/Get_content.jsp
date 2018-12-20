@@ -17,10 +17,12 @@
 	crossorigin="anonymous">
 <link rel="stylesheet" href="css/index.css" />
 <%
-	List<Vehicule_entity> vehicules = (List<Vehicule_entity>) request.getAttribute("vehicules");
+	List<VehiculeEntity> vehicules = (List<VehiculeEntity>) request.getAttribute("vehicules");
 %>
 <title>Content</title>
-<% User_entity user = (User_entity)request.getSession(false).getAttribute("currentSessionUser");%>
+<%
+	UserEntity user = (UserEntity)request.getSession(false).getAttribute("currentSessionUser");
+%>
 </head>
 	<header
 		class="navbar navbar-expand flex-column flex-md-row bd-navbar header">

@@ -15,7 +15,9 @@ pageEncoding="UTF-8"%>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
     <link rel="stylesheet" href="css/index.css" />
 <title>Détails</title>
-<% User_entity user = (User_entity)request.getSession(false).getAttribute("currentSessionUser");%>
+<%
+	UserEntity user = (UserEntity)request.getSession(false).getAttribute("currentSessionUser");
+%>
 </head>
 	<header
 		class="navbar navbar-expand flex-column flex-md-row bd-navbar header">
@@ -45,7 +47,9 @@ pageEncoding="UTF-8"%>
 		</ul>
 	</header>
 <body>
-	<% Vehicule_entity ve = (Vehicule_entity)request.getAttribute("vehicule"); %>
+	<%
+		VehiculeEntity ve = (VehiculeEntity)request.getAttribute("vehicule");
+	%>
 
 	<div class="container">
 		<div class="jumbotron">
