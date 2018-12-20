@@ -1,0 +1,3 @@
+INDEX VERSION 1.131
+/Users/sid/Documents/works/university/programmation-par-composants/code/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/3437051778.index
+/Interface_Web/src
