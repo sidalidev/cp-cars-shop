@@ -3,7 +3,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta http-equiv="X-UA-Compatible" content="ie=edge" />
@@ -17,7 +16,7 @@
 		<div class="column">
 			<h2 class="ui teal image header">
 				<!-- <img src="assets/images/logo.png" class="image" /> -->
-				<div class="content">Ajout d'un vehicule</div>
+				<div class="content">Inscription</div>
 			</h2>
 			<form class="ui large form" action="Users_Servlet" method="post">
 				<div class="ui stacked segment">
@@ -39,4 +38,8 @@
 		</div>
 	</div>
 </body>
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"
+	integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+	crossorigin="anonymous"></script>
+<script type="text/javascript" src="assets/semantic-ui/semantic.min.js"></script>
 </html>

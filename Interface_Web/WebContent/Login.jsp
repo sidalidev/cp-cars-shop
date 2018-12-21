@@ -1,17 +1,44 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
-<meta http-equiv="Content-Type"
-	content="text/html; charset=windows-1256">
-<title>Login Page</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+<title>Connexion</title>
+<link rel="stylesheet" href="assets/semantic-ui/semantic.min.css" />
 </head>
 <body>
-	<form action="Users_Servlet" method="get">
-		<input type="email" name="email" placeholder="user@fournisseur.fr"/>
-		<input type="password" name="password" placeholder="*******" />
-		<input type="submit" value="submit">
-	</form>
+	<div class="ui middle aligned center aligned grid"
+		style="max-width: 500px; margin: auto;">
+		<div class="column">
+			<h2 class="ui teal image header">
+				<!-- <img src="assets/images/logo.png" class="image" /> -->
+				<div class="content">Connexion</div>
+			</h2>
+			<form class="ui large form" action="Users_Servlet" method="get">
+				<div class="ui stacked segment">
+					<div class="field">
+						<div class="ui left icon input">
+							<i class="user icon"></i> <input type="email" name="email"
+								placeholder="Email" />
+						</div>
+					</div>
+					<div class="field">
+						<div class="ui left icon input">
+							<i class="lock icon"></i> <input type="password" name="password"
+								placeholder="Mot de passe" />	
+						</div>
+					</div>
+					<button class="ui fluid large teal submit button" type="submit">Se connecter</button>
+				</div>
+			</form>
+		</div>
+	</div>
 </body>
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"
+	integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+	crossorigin="anonymous"></script>
+<script type="text/javascript" src="assets/semantic-ui/semantic.min.js"></script>
 </html>
