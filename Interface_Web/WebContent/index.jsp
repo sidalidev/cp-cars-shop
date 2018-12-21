@@ -9,6 +9,7 @@
 <%
 	UserEntity user = (UserEntity)request.getSession(false).getAttribute("currentSessionUser");
 %>
+
 </head>
 
 <body>
@@ -20,34 +21,30 @@
 <% if(user==null){ %>
 <li><a href="/Interface_Web/CreateUser.jsp">Creation compte</a></li>
 <li><a href="/Interface_Web/Login.jsp">Se connecter</a></li>
-<li><a href="/Interface_Web/add-vehicules.jsp">Add Vehicules</a></li>
 <li><a href="/Interface_Web/Vehicule_Servlet?method=getAll">Voir vehicule</a></li>
-<li><a href="/Interface_Web/Vehicule_Servlet?id=7">Voir le vehicule</a></li>
-<li><a href="/Interface_Web/Cart_Servlet?method=getAll">Voir toutes les commandes</a></li>
 <% } else { %>
-<li><a href="/Interface_Web/CreateUser.jsp">Add vehicule</a></li>
+
+<% if(user.getRole()==1){ %>
+<li><a href="/Interface_Web/add-vehicules.jsp">Add Vehicules</a></li>
+<li><a href="/Interface_Web/Vehicule_Servlet?id=7">Voir le vehicule</a></li>
+<li><a href="/Interface_Web/view-option">Voir les options</a></li>
+<li><a href="/Interface_Web/view-type">Voir les options</a></li>
+<li><a href="/Interface_Web/Cart_Servlet?method=getAll">Voir toutes les commandes</a></li>
+<%} %>
+
+<li><a href="/Interface_Web/CreateUser.jsp">Deconnexion</a></li>
+<li><a href="">Mon compte</a></li>
 <%} %>
 </ul>
 </header>
 
+<content>
 
-
-<form action="Options_Servlet" method="get">
-								<button type="submit" class="btn btn-primary">Accéder
-									aux options</button>
-</form>
-
-<form action="Type_Servlet" method="get">
-								<button type="submit" class="btn btn-primary">Accéder
-									aux types</button>
-</form>
-
-<form action="Type_Servlet" method="get">
-								<button type="submit" class="btn btn-primary">Accéder
-									aux types</button>
-</form>
+	<div> Bienvenue sur le magasin d'ecommerce </div>
 	
-
+	<li><a href="/Interface_Web/Vehicule_Servlet?method=getAll">Voir tous les vehicule</a></li>
+	
+</content>
 
 </body>
 </html>
