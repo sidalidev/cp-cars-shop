@@ -72,8 +72,8 @@ public class CartServlet extends HttpServlet {
     	if(cart == null) {
     		
     	
-    		
-            VehiculesEntity vehicule = InterVehicule.getVehiculeById(vehicule_id);
+    		Vehicules v = new Vehicules();
+            VehiculesEntity vehicule = v.getVehiculeById(vehicule_id);
             
             
     		List<VehiculesEntity> list_vehicule = new ArrayList<>();

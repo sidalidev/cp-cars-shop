@@ -28,6 +28,7 @@
 	<th>Quantite </th>
 	<th>Type du vehicule </th>
 	<th>Options du vehicule </th>
+	<th> Details </th>
 	
 <tr>		
 	<%
@@ -58,6 +59,13 @@
 		}
 	%>
 		<%= test %>
+		<th>
+		<%
+		
+		String url = new String();
+		url = "/Interface_Web/Vehicule_Servlet?id="+vehicule.get(i).getId();
+		%>
+		<li><a href=<%= url %>>Details</a></li>
 		<th>
 </tr>
 <%

@@ -49,7 +49,7 @@ public class VehiculesServlet extends HttpServlet {
             throws ServletException, IOException {
 
 String action = String.valueOf(request.getParameter("method"));
-Integer id = Integer.valueOf(request.getParameter("id"));
+
     	
 
     	if (action.equals("getAll")) {
@@ -58,10 +58,10 @@ Integer id = Integer.valueOf(request.getParameter("id"));
         	request.getRequestDispatcher("view-vehicules.jsp").forward(request, response);	
     	}
     	else {
+    		Integer id = Integer.valueOf(request.getParameter("id"));
     		VehiculesEntity vehicules = interVehicule.getVehiculeById(id);
         	request.setAttribute("vehicule_id", vehicules);
         	request.getRequestDispatcher("view-one-vehicules.jsp").forward(request, response);	
-    	
     	}
     }
 
