@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>EAR</name>
+	<name>CommerceEAR</name>
 	<comment></comment>
 	<projects>
+		<project>Site_TP</project>
+		<project>Entities</project>
+		<project>Interface_Web</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>
