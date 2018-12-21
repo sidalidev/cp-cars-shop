@@ -13,7 +13,7 @@ import javax.servlet.http.HttpSession;
 import entities.UserEntity;
 import interfaces.IUser;
 
-@WebServlet("/User_Servlet")
+@WebServlet("/Users_Servlet")
 public class UserServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
@@ -29,35 +29,25 @@ public class UserServlet extends HttpServlet {
 			throws ServletException, IOException {
 
 		UserEntity user = interUser.getUser(request.getParameter("email"));
-		String action = String.valueOf(request.getParameter("method"));
-
-		if (action.equals("logout")) {
-
-			HttpSession session = request.getSession(false);
-			session.invalidate();
-			request.getRequestDispatcher("index.jsp").forward(request, response);
-
-		} else {
-
+		System.out.print(user.getPassword());
 			if (user.getPassword().equals(request.getParameter("password"))) {
 				HttpSession session = request.getSession(true);
 				session.setAttribute("currentSessionUser", user);
 				request.getRequestDispatcher("index.jsp").forward(request, response);
 			}
-		}
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 
-		String username = String.valueOf(request.getParameter("username"));
+	
 		String email = String.valueOf(request.getParameter("email"));
 		String password = String.valueOf(request.getParameter("password"));
 
 		UserEntity user = new UserEntity();
-		user.setUsername(username);
 		user.setEmail(email);
 		user.setPassword(password);
+		user.setRole(2);
 
 		interUser.addUser(user);
 

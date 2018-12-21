@@ -6,7 +6,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-import enums.Role;
+//import enums.Role;
 
 @Entity
 @Table(name = "User")
@@ -14,22 +14,12 @@ public class UserEntity {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
-	private String username;
 	private String email;
 	private String password;
-	private Boolean valid;
-	private Role role;
+	private Integer role;
 
 	public UserEntity() {
 		super();
-	}
-
-	public String getUsername() {
-		return username;
-	}
-
-	public void setUsername(String username) {
-		this.username = username;
 	}
 
 	public String getEmail() {
@@ -52,19 +42,12 @@ public class UserEntity {
 		return id;
 	}
 
-	public Boolean isValid() {
-		return valid;
-	}
-
-	public void setValid(Boolean valid) {
-		this.valid = valid;
-	}
-
-	public Role getRole() {
+	/* 1 pour admin, 2 pour les autres*/
+	public Integer getRole() {
 		return role;
 	}
 
-	public void setRole(Role role) {
+	public void setRole(Integer role) {
 		this.role = role;
 	}
 

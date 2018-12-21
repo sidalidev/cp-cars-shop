@@ -8,7 +8,7 @@
 <title>Login Page</title>
 </head>
 <body>
-	<form action="User_Servlet" method="get">
+	<form action="Users_Servlet" method="get">
 		<input type="email" name="email" placeholder="user@fournisseur.fr"/>
 		<input type="password" name="password" placeholder="*******" />
 		<input type="submit" value="submit">
