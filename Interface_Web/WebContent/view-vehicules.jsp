@@ -19,7 +19,7 @@
 <body>
 	<div style="padding: 1em;">
 		<h1>Liste des véhicules</h1>
-		<div class="ui items">
+		<div class="ui divided items">
 
 
 			<%

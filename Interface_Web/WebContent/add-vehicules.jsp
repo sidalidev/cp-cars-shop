@@ -45,8 +45,8 @@
 					</div>
 					<div class="field">
 						<div class="ui left icon input">
-							<i class="lock icon"></i> <input type="number" step="0.01"
-								name="price" placeholder="Prix" />
+							<i class="lock icon"></i> <input type="number" name="price"
+								placeholder="Prix" />
 						</div>
 					</div>
 					<div class="field">
