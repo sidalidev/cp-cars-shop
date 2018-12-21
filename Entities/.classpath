@@ -3,7 +3,7 @@
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
-	<classpathentry kind="lib" path="/home/emilie/Documents/fac/wildfly-14.0.1.Final/modules/system/layers/base/javax/persistence/api/main/javax.persistence-api-2.2.jar"/>
+	<classpathentry kind="lib" path="/Users/sid/Documents/works/university/programmation-par-composants/wildfly-14.0.1.Final/modules/system/layers/base/javax/persistence/api/main/javax.persistence-api-2.2.jar"/>
 	<classpathentry kind="con" path="org.eclipse.jst.server.core.container/org.jboss.ide.eclipse.as.core.server.runtime.runtimeTarget/WildFly 14.0 Runtime">
 		<attributes>
 			<attribute name="owner.project.facets" value="jpt.jpa"/>
