@@ -20,11 +20,6 @@
 		<h1>
 			Details du véhicule :
 			<%=vehicule.getName()%></h1>
-
-
-
-		<li>Type: <%=vehicule.getType().getName()%></li> Options:
-
 		<div class="ui card">
 			<div class="image">
 				<img src="assets/images/vehicules/car.jpg">
@@ -61,7 +56,7 @@
 				<span class="right floated"> <a
 					href="/Interface_Web/Cart_Servlet?user_id=1&vehicule_id=7">
 						Ajouter au panier</a>
-				</span> <span> <i class="user icon"></i>
+				</span> <span> <i class="user icon"></i>Type: <%=vehicule.getType().getName()%>
 				</span>
 			</div>
 		</div>
