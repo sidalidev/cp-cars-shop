@@ -4,15 +4,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
-<title>Inscription</title>
 <%
 	UserEntity user = (UserEntity) request.getSession(false).getAttribute("currentSessionUser");
 %>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-<title>Ajout d'un vehicule</title>
+<title>Accueil</title>
 <link rel="stylesheet" href="assets/semantic-ui/semantic.min.css" />
 </head>
 
