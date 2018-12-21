@@ -16,6 +16,7 @@ pageEncoding="UTF-8"%>
     <link rel="stylesheet" href="css/index.css" />
     <%
     	CarEntity v = (CarEntity)request.getAttribute("v");
+    System.out.println(v);
     %>
     <%
     	MotoEntity m = (MotoEntity)request.getAttribute("m");
